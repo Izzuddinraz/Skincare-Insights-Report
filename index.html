@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Trends Report - Thailand 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lavender-deep: #6c5ce7;
+            --lavender-mid: #a29bfe;
+            --pastel-bg: #f8f7ff;
+            --white: #ffffff;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --border-color: #eeeafb;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: var(--pastel-bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6c5ce7 0%, #8e7dff 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.15);
+        }
+
+        .insight-icon-container {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        header h1 { font-size: 2.2rem; margin: 0; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        header p { font-size: 0.95rem; opacity: 0.85; margin: 0; }
+
+        .container { max-width: 1140px; margin: -40px auto 80px; padding: 0 20px; }
+
+        .main-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+            margin-bottom: 30px;
+        }
+
+        .main-card h2 { color: var(--lavender-deep); font-size: 1.6rem; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; }
+
+        .tab-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 35px; flex-wrap: wrap; }
+
+        .tab-btn {
+            padding: 12px 28px;
+            border: none;
+            background: var(--white);
+            color: var(--lavender-deep);
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active { background: var(--lavender-deep); color: var(--white); box-shadow: 0 6px 18px rgba(108, 92, 231, 0.25); }
+
+        .tab-content { display: none; animation: fadeIn 0.5s ease-out; }
+        .tab-content.active { display: block; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
+
+        .beauty-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            border-left: 6px solid var(--lavender-mid);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img { width: 100%; height: 240px; object-fit: cover; }
+        .card-body { padding: 30px; }
+
+        .label-tag {
+            display: inline-block;
+            background: var(--pastel-bg);
+            color: var(--lavender-deep);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .verbatim-combined-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            border: 1px dashed var(--lavender-mid);
+        }
+
+        .voice-box {
+            background: #fdfdff;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--lavender-mid);
+        }
+
+        .translation-direct { margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; font-style: italic; color: var(--lavender-deep); font-size: 0.95rem; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+        .footer-logo { height: 45px; margin-bottom: 10px; }
+
+        @media (max-width: 850px) {
+            .grid-2, .verbatim-combined-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="insight-icon-container">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6"></path>
+            <path d="M10 22h4"></path>
+            <path d="M12 2v1"></path>
+            <path d="M5.22 5.22l.71.71"></path>
+            <path d="M18 12a6 6 0 0 0-6-6c-3.31 0-6 2.69-6 6 0 2.22 1.21 4.15 3 5.19V18h6v-.81c1.79-1.04 3-2.97 3-5.19z"></path>
+            <path d="M18.78 5.22l-.71.71"></path>
+        </svg>
+    </div>
+    <h1>BEAUTY SKINCARE INSIGHTS</h1>
+    <p>Thailand Market Social Listening Topline Report | 2026</p>
+</header>
+
+<div class="container">
+    
+    <div class="main-card">
+        <h2>Executive Summary</h2>
+        <p><strong>A paradigm shift from makeup-centric beauty to a focus on skin health from within.</strong></p>
+        <p>The skincare industry in Thailand is witnessing a paradigm shift from makeup-centric beauty to a focus on skin health from within. Consumers are increasingly moving away from using makeup to conceal skin issues and are instead prioritizing building a healthy and resilient skin foundation for long-term skin health and sustainable beauty.</p>
+    </div>
+
+    <div class="tab-nav">
+        <button class="tab-btn" id="btn-trends" onclick="switchTab('trends')">Emerging Trends</button>
+        <button class="tab-btn active" id="btn-combined" onclick="switchTab('combined')">Key Themes & Voice</button>
+        <button class="tab-btn" id="btn-drivers" onclick="switchTab('drivers')">Drivers</button>
+        <button class="tab-btn" id="btn-personas" onclick="switchTab('personas')">Personas</button>
+    </div>
+
+    <div id="trends" class="tab-content">
+        <div class="grid">
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Market Shift</span>
+                <h3>Thai Beauty Brand Ascendancy (T-Beauty)</h3>
+                <p>The rise of Thai skincare brands like Skinsista and Dermie gaining significant market traction and consumer preference. This trend reflects growing consumer trust in locally-developed beauty brands that understand regional skin needs and preferences.</p>
+            </div></div>
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Core Value</span>
+                <h3>Healthy Skin Foundation Movement</h3>
+                <p>A paradigm shift from makeup-centric beauty to prioritizing skin health from within. Consumers are moving away from coverage-based approaches toward building strong, resilient skin as the foundation of sustainable beauty.</p>
+            </div></div>
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Innovation</span>
+                <h3>Makeup Care Hybrid Category</h3>
+                <p>The emergence of makeup products with skincare benefits, blurring the lines between makeup and skincare. Products like foundation powders with treatment properties represent a new category addressing multi-functional beauty desires.</p>
+            </div></div>
+        </div>
+    </div>
+
+    <div id="combined" class="tab-content active">
+        <div class="main-card">
+            <div class="verbatim-combined-card">
+                <div>
+                    <span class="label-tag">Consumer Theme: Performance</span>
+                    <h3>Visible Efficacy and Touchability</h3>
+                    <p>Consumers consistently highlight noticeable improvements in skin quality, including clearer skin, reduced acne, improved texture, and enhanced hydration. The primary value lies in results that are 'touchable' and evident to the naked eye.</p>
+                </div>
+                <div class="voice-box">
+                    <strong>ชอบมากกก ใช้แล้วผิวดีขึ้นจริงๆ แนะนำค่า</strong>
+                    <div class="translation-direct">"I really love it! After using it, my skin actually improved. Highly recommend!"</div>
+                </div>
+            </div>
+
+            <div class="verbatim-combined-card">
+                <div>
+                    <span class="label-tag">Consumer Theme: Trust</span>
+                    <h3>Sunscreen Authenticity & Regulatory Concern</h3>
+                    <p>Significant consumer conversation surrounds the reliability of sunscreen ratings. There is heightened anxiety regarding the actual level of protection provided versus what is advertised, specifically in response to recent lab-testing controversies.</p>
+                </div>
+                <div class="voice-box">
+                    <strong>กันแดดใช้แต่ลอรีอัล😭😭 กลัวของปลอมกับค่า SPF ไม่ตรง</strong>
+                    <div class="translation-direct">"I only use L’Oréal sunscreen. I'm scared of fakes and SPF values not matching the label."</div>
+                </div>
+            </div>
+
+            <div class="verbatim-combined-card">
+                <div>
+                    <span class="label-tag">Consumer Theme: Application</span>
+                    <h3>Texture and Absorption Experience</h3>
+                    <p>Product sensory experience, particularly fast absorption and non-greasy finishes, is a critical feedback point. Consumers prioritize products that fit the humid Thai climate without leaving residue.</p>
+                </div>
+                <div class="voice-box">
+                    <strong>เนื้อบางเบา ซึมไวมาก ไม่เหนียวเหนอะหนะเลย</strong>
+                    <div class="translation-direct">"The texture is light and absorbs so fast. Not sticky at all!"</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="drivers" class="tab-content">
+        <div class="grid-2">
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Emotional Driver</span>
+                <h3>Holistic Wellness and Inner-Outer Beauty Integration</h3>
+                <p>Consumers increasingly view skincare as part of a broader holistic wellness approach that combines inner and outer beauty solutions. This reflects an emotional driver where beauty is connected to overall health, self-care routines, and lifestyle choices, creating demand for integrated wellness solutions.</p>
+            </div></div>
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Functional Driver</span>
+                <h3>Accessibility and Multi-Channel Availability</h3>
+                <p>Consumer purchasing is driven by product accessibility across multiple retail channels including online platforms, beauty trucks, and various e-commerce sites. The convenience of finding products through preferred shopping channels influences purchase decisions and brand accessibility.</p>
+            </div></div>
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Emotional Driver</span>
+                <h3>Local Brand Pride and Domestic Production</h3>
+                <p>Consumers show emotional preference for locally-produced skincare brands that represent Thai innovation and quality. The pride in supporting domestic brands that achieve international standards and export success creates an emotional connection and loyalty driver.</p>
+            </div></div>
+            <div class="beauty-card"><div class="card-body">
+                <span class="label-tag">Functional Driver</span>
+                <h3>Efficacy and Visible Results Expectation</h3>
+                <p>Consumers are driven by the expectation of tangible, visible results from skincare products. The desire to see improvements in skin health, clarity, firmness, and appearance motivates purchasing decisions, with consumers seeking products that deliver measurable outcomes rather than just promises.</p>
+            </div></div>
+        </div>
+    </div>
+
+    <div id="personas" class="tab-content">
+        <div class="grid">
+            <div class="beauty-card">
+                <img src="https://images.unsplash.com/photo-1552664688-cf412ec27db2?auto=format&fit=crop&w=800" class="card-img" alt="Priya">
+                <div class="card-body">
+                    <span class="label-tag">Priya</span>
+                    <h3>The Acne-Prone Skin Problem Solver</h3>
+                    <p>Priya struggles with acne and sensitive skin. She actively seeks dermatologist-recommended products and values Thai brands that specifically understand local skin concerns and environmental stressors. She relies heavily on review platforms to verify efficacy before purchasing and is willing to pay a premium for clinically-proven results.</p>
+                </div>
+            </div>
+
+            <div class="beauty-card">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800" class="card-img" alt="Somchai">
+                <div class="card-body">
+                    <span class="label-tag">Somchai</span>
+                    <h3>The Innovation-Seeking Mask Enthusiast</h3>
+                    <p>Somchai views face masking as a top-priority step and seeks cutting-edge tech. He is particularly loyal to brands using proprietary innovations like CICA technology for rapid skin recovery. He is a frequent buyer of high-intensity treatment masks during e-commerce sales events and values the "ritual" aspect of skincare.</p>
+                </div>
+            </div>
+
+            <div class="beauty-card">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800" class="card-img" alt="Kanya">
+                <div class="card-body">
+                    <span class="label-tag">Kanya</span>
+                    <h3>The Gen Z Skincare Investor</h3>
+                    <p>Kanya invests heavily in skincare as a form of personal investment and self-love. She is heavily influenced by social media trends and prefers globally recognized medical-grade brands that offer high prestige and clear ingredient transparency for her preventative routine. She views her skincare shelf as a reflection of her identity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <img src="https://www.ipsos.com/themes/custom/ipsos/logo.svg" alt="IPSOS Logo" class="footer-logo">
+    <div>IPSOS | © 2026</div>
+</footer>
+
+<script>
+    function switchTab(tabId) {
+        var contents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < contents.length; i++) { contents[i].classList.remove("active"); }
+        var buttons = document.getElementsByClassName("tab-btn");
+        for (var j = 0; j < buttons.length; j++) { buttons[j].classList.remove("active"); }
+        
+        document.getElementById(tabId).classList.add("active");
+        document.getElementById('btn-' + tabId).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
